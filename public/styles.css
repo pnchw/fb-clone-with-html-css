@@ -1,0 +1,927 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+nav {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #cccccc;
+    background: #fff;
+    position: fixed;
+    top: 0px;
+    z-index: 1000;
+}
+
+nav .left {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin-left: 10px;
+    width: 25%;
+}
+
+nav .left .logo img {
+    width: 50px;
+    margin: 5px 0;
+    cursor: pointer;
+}
+
+nav .left .search-bar {
+    width: 230px;
+    height: 40px;
+    background: #efefef;
+    border-radius: 30px;
+    padding: 0 0 0 10px;
+    margin-left: 5px;
+    position: relative;
+    left: 15px;
+}
+
+nav .left .search-bar i {
+    line-height: 40px;
+    font-size: 15px;
+    color: #919191;
+    margin-right: 5px;
+}
+
+nav .left .search-bar input {
+    background: transparent;
+    border: 0px;
+    font-size: 15px;
+    width: 180px;
+}
+
+nav .center {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+}
+
+nav .center i{
+    margin: 0 30px;
+    font-size: 15px;
+}
+
+nav .center i:hover {
+    color: #45abff;
+    cursor: pointer;
+}
+
+nav .right {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin-right: 15px;
+    width: 25%;
+}
+
+nav .right i {
+    width: 40px;
+    height: 40px;
+    background: #efefef;
+    line-height: 40px;
+    border-radius: 50%;
+    font-size: 20px;
+    padding-left: 11px;
+    margin-left: 5px;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+nav .right img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    margin-left: 5px;
+    line-height: 45px;
+    cursor: pointer;
+}
+
+
+/*---------------------Main---------------------*/
+.main {
+    display:flex;
+    margin-top: 60px;
+    background: #f5f5f5;
+}
+
+/*---------------------Main Left---------------------*/
+.main .main-left {
+    width: 25% ;
+    height: 92vh;
+    overflow: hidden;
+    overflow-y: scroll;
+    background: #f5f5f5;
+    padding: 20px 6px 5px 10px;
+    position: fixed;
+    }
+
+.main .main-left::-webkit-scrollbar {
+    width: 7px;
+}
+
+.main .main-left::-webkit-scrollbar-thumb {
+    background: #f5f5f5;
+    border-radius: 20px;
+}
+
+.main .main-left::-webkit-scrollbar-thumb:hover {
+    background: #cccccc;
+}
+
+.main .main-left .img {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.main .main-left .img:hover {
+    background-color: #e3e3e3;
+    border-radius: 10px;
+}
+
+.main .main-left .img img{
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    margin: 8px 15px 8px 0px;
+}
+
+.main .main-left hr {
+    width: 100%;
+    height: 1px;
+    border: 0px;
+    background-color: #cccccc;
+    margin: 10px 0px;
+}
+
+.main .main-left h2 {
+    font-size: 18px;
+    color: #919191;
+    margin: 5px 0px;
+}
+
+.main .main-left .edit {
+    font-size: 15px;
+    color: #45abff;
+    float: right;
+    position: relative;
+    bottom: 24px;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.main .main-left .edit:hover {
+    opacity: 1;
+}
+
+.main .main-left .shortcuts {
+    display: flex;
+    align-items: center;
+    transition: 0.2s;
+}
+
+.main .main-left .shortcuts:hover {
+    background-color: #e3e3e3;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.main .main-left .shortcuts img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
+    margin: 8px 15px 8px 0px;
+}
+
+/*---------------------Main Center---------------------*/
+.main .main-center {
+    width: 50%;
+    height: auto;
+    padding: 20px 20px 0 20px;
+    background-color: #f5f5f5;
+    margin-left: 25%;
+    overflow: clip;
+}
+
+.main .main-center .center-story-content {
+    width: 100%;
+    height: 260px;
+    display: flex;
+    gap: 10px;
+    margin: 10px 0;
+    overflow: hidden;
+    overflow-x: scroll;
+    position: relative;
+}
+
+.main .main-center .previous-btn, .main .main-center .next-btn {
+    width: 40px;
+    height: 40px;
+    background: #efefef;
+    line-height: 40px;
+    border-radius: 50%;
+    font-size: 20px;
+    padding: 10px 13px;
+    cursor: pointer;
+    margin: 0;
+    display: flex;
+}
+
+.main .main-center .previous-btn {
+    position: absolute;
+    left: 8px;
+    top: 40%;
+}
+
+.main .main-center .next-btn {
+    position: absolute;
+    right: 8px;
+    top: 40%;
+}
+
+.main .main-center .center-story-content::-webkit-scrollbar {
+    width: none;
+    display: none;
+    /* background: transparent; */
+}
+
+.main .main-center .center-story-content .my-story-card {
+    width: 135px;
+    height: 250px;
+    flex-shrink: 0;
+    overflow: hidden; 
+    /* because in img tag er did not add border-radius, so here we need to add overflow: hidden; */
+    margin: 5px auto;
+    box-shadow: 0 1px 8px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.main .main-center .center-story-content .my-story-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.main .main-center .center-story-content .my-story-card .story-upload {
+    width: 100%;
+    height: 60px;
+    background-color: #fff;
+    position: relative;
+    bottom: 50px;
+    cursor: pointer;
+}
+
+.main .main-center .center-story-content .my-story-card .story-upload img {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    margin: 0 auto;
+    position: relative;
+    bottom: 15px;
+    border-radius: 50%;
+}    
+
+.main .main-center .center-story-content .my-story-card .story-upload .story-tag {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    bottom: 10px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.main .main-center .center-story-content .story-card {
+    width: 135px;
+    height: 250px;
+    overflow: hidden;
+    /* because in img tag er did not add border-radius, so here we need to add overflow: hidden; */
+    flex-shrink: 0;
+    margin: 5px auto;
+    box-shadow: 0 1px 8px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.main .main-center .center-story-content .story-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.main .main-center .center-story-content .story-card .story-profile {
+    position: relative;
+    bottom: 240px;
+    margin-left: 10px;
+}
+
+.main .main-center .center-story-content .story-card .story-profile img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 4px solid #45abff;
+}
+
+.main .main-center .center-story-content .story-card .story-profile .circle {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #27cc37;
+    border: 2px solid #000000;
+    position: relative;
+    bottom: 15px;
+    left: 30px;
+}
+
+.main .main-center .center-story-content .story-card .story-name {
+    position: relative;
+    bottom: 100px;
+    padding: 0 10px
+}
+
+.main .main-center .center-story-content .story-card .story-name p {
+    font-weight: bold;
+    font-size: 14px;
+    color: #fff;
+}
+
+.main .main-center .my-post {
+    width: 100%;
+    height: auto;
+    background-color: #fff;
+    padding: 10px 15px;
+    border-radius: 7px;
+    box-shadow: 0 1px 8px rgba(0,0,0,0.2);
+}
+
+.main .main-center .my-post .post-top img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.main .main-center .my-post .post-top {
+    display: flex;
+    align-items: center;
+}
+
+.main .main-center .my-post .post-top input {
+    width: 95%;
+    padding: 10px;
+    margin-left: 20px;
+    border: 0px;
+    outline: none;
+    border-radius: 30px;
+    font-size: 17px;
+    background-color: #efefef;
+}
+
+.main .main-center .my-post .post-top input:hover {
+    background-color: #e3e3e3;
+    cursor: pointer;
+}
+
+.main .main-center .my-post hr {
+    width: 100%;
+    height: 1px;
+    background-color: #cccccc;
+    border: 0;
+    margin: 10px 0;
+}
+
+.main .main-center .my-post .post-bottom {
+    width: 95%;
+    /* display: grid;
+    grid-template-columns: 1fr 1fr 1fr; */
+    margin: 5px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: inherit;
+}
+
+.main .main-center .my-post .post-bottom .post-icon {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    /* padding: 5px 40px; */ /*****************/
+    cursor: pointer;
+}
+
+.main .main-center .my-post .post-bottom .post-icon:hover {
+    background-color: #efefef;
+    border-radius: 8px;
+}
+
+.main .main-center .my-post .post-bottom .post-icon img {
+    margin: 8px;
+}
+
+.main .main-center .friends-post {
+    width: 100%;
+    height: auto;
+    background-color: #fff;
+    border-radius: 7px;
+    box-shadow: 0 1px 8px rgba(0,0,0,0.2);
+    margin: 10px 0;
+    padding: 10px 15px;
+}
+
+.main .main-center .friends-post .friend-post-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.main .main-center .friends-post .friend-post-top .img-and-name {
+    display: flex;
+    align-items: center;
+}
+
+.main .main-center .friends-post .friend-post-top .img-and-name img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    margin-right: 8px;
+    cursor: pointer;
+}
+
+.main .main-center .friends-post .friend-post-top .img-and-name .friends-name .friends-name{
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.main .main-center .friends-post .friend-post-top .img-and-name .friends-name .friends-name:hover {
+    text-decoration: underline;
+}
+
+.main .main-center .friends-post .friend-post-top .img-and-name .friends-name .time {
+    font-size: 14px;
+    color: #919191;
+    margin: 3px 0;
+}
+
+.main .main-center .friends-post .friend-post-top .img-and-name .friends-name .time i {
+    font-size: 10px;
+}
+
+.main .main-center .friends-post .friend-post-top .menu {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+
+.main .main-center .friends-post .friend-post-top .menu:hover {
+    background-color: #efefef;
+    cursor: pointer;
+}
+
+.main .main-center .friends-post .friend-post-top .menu i {
+    font-size: 18px;
+    line-height: 20px;
+    margin: 9px;
+    padding: 0;
+}
+
+.main .main-center .friends-post img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.main .main-center .friends-post .info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.main .main-center .friends-post .info .emoji-img {
+    display: flex;
+    align-items: center;
+}
+
+.main .main-center .friends-post .info .emoji-img img {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.main .main-center .friends-post .info .emoji-img p {
+    margin-left: 10px;
+    font-size: 16px;
+    color: #919191;
+    cursor: pointer;
+}
+
+.main .main-center .friends-post .info .comment {
+    display: flex;
+    align-items: center;
+}
+
+.main .main-center .friends-post .info .comment p {
+    font-size: 15px;
+    padding: 0 5px;
+    color: #919191;
+    cursor: pointer;
+}
+
+.full-comment {
+    display: inline-block;
+}
+.bev-comment {
+    display: none;
+}
+
+.main .main-center .friends-post hr {
+    width: 100%;
+    height: 1px;
+    background-color: #cccccc;
+    border: 0;
+    margin: 10px 0;
+}
+
+.main .main-center .friends-post .like {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.main .main-center .friends-post .like .like-icon {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.main .main-center .friends-post .like .like-icon i {
+    font-size: 20px;
+    margin-right: 8px;
+    color: #919191;
+}
+
+.main .main-center .friends-post .like .like-icon i.activity {
+    color: #45abff;
+}
+
+.main .main-center .friends-post .comment-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.main .main-center .friends-post .comment-wrapper img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    cursor: pointer;
+}
+
+.main .main-center .friends-post .comment-wrapper .circl {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #27cc27;
+    border: 2px solid #fff;
+    position: relative;
+    top: 12px;
+    right: 10px;
+
+}
+
+.main .main-center .friends-post .comment-wrapper .comment-area {
+    width: 95%;
+    padding: 5px 15px;
+    background-color: #efefef;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.main .main-center .friends-post .comment-wrapper .comment-area input {
+    width: 85%;
+    height: 30px;
+    background: none;
+    border: none;
+    outline: none;
+}
+
+.main .main-center .friends-post .comment-wrapper .comment-area .comment-area-stickersent {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main .main-center .friends-post .comment-wrapper .comment-area .comment-area-stickersent .comment-area-sticker img {
+    width: 25px;
+    height: 25px;
+    padding: 0;
+    margin: 0;
+}
+
+.main .main-center .friends-post .comment-wrapper .comment-area .comment-area-stickersent .comment-area-sticker img:hover {
+    background-color: #cccccc;
+    cursor: pointer;
+}
+
+.main .main-center .friends-post .comment-wrapper .comment-area .comment-area-stickersent .comment-area-sentbtn {
+    width: 25px;
+    height: 25px;
+    padding: 0;
+    margin: 0;
+}
+
+.main .main-center .friends-post .comment-wrapper .comment-area .comment-area-stickersent .comment-area-sentbtn:hover {
+    color: #45abff;
+    cursor: pointer;
+}
+
+.main .main-center .load {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0 50px 0;
+}
+
+.main .main-center .load button {
+    background-color: none;
+    padding: 5px 20px;
+    border: 1px solid #919191;
+    color: #919191;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.main .main-center .end {
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    /* or can use text-align: center; instead */
+    color: #919191;
+    margin: 10px 0;
+}
+
+.main .main-center .end span {
+    margin-left: 8px;
+    color: #45abff;
+}
+
+.main .main-center .end span i {
+    margin-right: 8px;
+
+}
+
+/*---------------------Main Right---------------------*/
+.main .main-right {
+    width: 25%;
+    height: 92vh;
+    overflow: hidden;
+    overflow-y: scroll;
+    background-color: #f5f5f5;
+    padding: 20px 10px 5px 6px;
+    position: fixed;
+    right: 0;
+}
+
+.main .main-right::-webkit-scrollbar {
+    width: 7px;
+}
+
+.main .main-right::-webkit-scrollbar-thumb {
+    border-radius: 20px;
+    background-color: #f5f5f5;
+}
+
+.main .main-right::-webkit-scrollbar-thumb:hover {
+    background-color: #cccccc;
+}
+
+.main .main-right .first-wrapper h2 {
+    font-size: 18px;
+    text-align: start;
+    color: #919191;
+    margin-bottom: 10px;
+}
+
+a, a:visited, a:hover, a:active {
+    color: inherit;
+    text-decoration: none;
+}
+
+.main .main-right .first-wrapper .first-wrapper-sponsor {
+    position: relative;
+    margin: 8px 15px 8px 0px;
+}
+
+.main .main-right .first-wrapper .first-wrapper-sponsor:hover {
+    background-color: #cccccc;
+    border-radius: 10px;
+}
+
+.main .main-right .first-wrapper .first-wrapper-sponsor .sponsor {
+    display: flex;
+    align-items: center;
+}
+
+.main .main-right .first-wrapper .first-wrapper-sponsor .sponsor img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
+    margin-right: 7px;
+}
+
+.main .main-right .first-wrapper .first-wrapper-sponsor .sponsor .text-des {
+    font-size: 16px;
+}
+
+.main .main-right .first-wrapper .first-wrapper-sponsor .menu {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.main .main-right .first-wrapper .first-wrapper-sponsor .menu i {
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.main .main-right .first-wrapper .first-wrapper-sponsor .menu:hover {
+    background-color: #e3e3e3;
+    cursor: pointer;
+}
+
+.main .main-right hr {
+    width: 100%;
+    height: 1px;
+    background-color: #cccccc;
+    border: 0;
+    margin: 10px 0;
+}
+
+.main .main-right .second-wrapper h2 {
+    font-size: 18px;
+    color: #919191;
+    margin: 5px 0;
+}
+
+.main .main-right .second-wrapper .img-and-tag {
+    display: flex;
+    align-items: center;
+}
+
+.main .main-right .second-wrapper .img-and-tag img {
+    width: 40px;
+    height: 40px;
+    margin: 8px 15px 8px 0;
+}
+
+.main .main-right .second-wrapper .img-and-tag p {
+    line-height: 22px;
+}
+
+.main .main-right .second-wrapper .img-and-tag p span {
+    font-weight: bold;
+}
+
+.main .main-right .third-wrapper h2 {
+    font-size: 18px;
+    color: #919191;
+    margin: 10px 0;
+}
+
+.main .main-right .third-wrapper .contact-tag {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main .main-right .third-wrapper .contact-tag .contact-icon i {
+    margin: 0 5px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    line-height: 35px;
+    padding-left: 8px;
+}
+
+.main .main-right .third-wrapper .contact-tag .contact-icon i:hover {
+    background-color: #efefef;
+    cursor: pointer;
+}
+
+.main .main-right .third-wrapper .contact {
+    display: flex;
+    align-items: center;
+    padding: 10px 0 10px 5px;
+}
+
+.main .main-right .third-wrapper .contact:hover {
+    background-color: #e3e3e3;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.main .main-right .third-wrapper .contact img {
+    width: 35px;
+    height: 35px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.main .main-right .third-wrapper .contact .circle {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #27cc27;
+    border: 2px solid #fff;
+    position: relative;
+    top: 14px;
+    right: 19px;
+}
+
+@media (max-width: 1099px) {
+    nav .left .search-bar {
+        width: 40px;
+    }
+
+    nav .left .search-bar input::placeholder {
+        color: transparent;
+    }
+
+    .main .main-left {
+        display: none;
+    }
+
+    .main .main-center {
+        margin-left: 0px;
+        width: 75%;
+    }
+}
+
+@media (max-width: 899px) {
+    .main .main-center {
+        margin: 0px auto;
+        width: 85%;
+    }
+    
+    .main .main-center .my-post .post-bottom {
+        display: flex;
+        align-items: center;
+    }
+
+    .main .main-right {
+        display: none;
+    }
+}
+
+@media (max-width: 700px) {
+    nav .center {
+        display: none;
+    }
+
+    .main .main-center {
+        width: 100%;
+    }
+
+    .full-comment {
+        display: none;
+    }
+
+    .bev-comment {
+        display: inline-block;
+    }
+}
