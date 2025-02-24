@@ -255,7 +255,6 @@ nav .right img {
 .main .main-center .center-story-content::-webkit-scrollbar {
     width: none;
     display: none;
-    /* background: transparent; */
 }
 
 .main .main-center .center-story-content .my-story-card {
@@ -263,7 +262,6 @@ nav .right img {
     height: 250px;
     flex-shrink: 0;
     overflow: hidden; 
-    /* because in img tag er did not add border-radius, so here we need to add overflow: hidden; */
     margin: 5px auto;
     box-shadow: 0 1px 8px rgba(0,0,0,0.2);
     border-radius: 10px;
@@ -310,7 +308,6 @@ nav .right img {
     width: 135px;
     height: 250px;
     overflow: hidden;
-    /* because in img tag er did not add border-radius, so here we need to add overflow: hidden; */
     flex-shrink: 0;
     margin: 5px auto;
     box-shadow: 0 1px 8px rgba(0,0,0,0.2);
@@ -409,8 +406,6 @@ nav .right img {
 
 .main .main-center .my-post .post-bottom {
     width: 95%;
-    /* display: grid;
-    grid-template-columns: 1fr 1fr 1fr; */
     margin: 5px auto;
     display: flex;
     align-items: center;
@@ -421,9 +416,10 @@ nav .right img {
 .main .main-center .my-post .post-bottom .post-icon {
     display: flex;
     align-items: center;
+    justify-content: center;
     margin: 0 auto;
-    /* padding: 5px 40px; */ /*****************/
     cursor: pointer;
+    flex-grow: 1;
 }
 
 .main .main-center .my-post .post-bottom .post-icon:hover {
@@ -682,7 +678,6 @@ nav .right img {
     font-size: 15px;
     display: flex;
     justify-content: center;
-    /* or can use text-align: center; instead */
     color: #919191;
     margin: 10px 0;
 }
